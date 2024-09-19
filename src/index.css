@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ReactModal__Overlay {
+  background-color: rgba(18, 20, 23, 0.5) !important;
+  z-index: 999;
+}
+
+.active {
+  color: black;
+  background-color: white;
+  border-radius: 34px;
+  padding: 10px 15px;
+}
