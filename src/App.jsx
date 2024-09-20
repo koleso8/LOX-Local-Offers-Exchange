@@ -32,23 +32,23 @@ function App() {
     <Routes>
       <Route
         path="/"
-        element={<PrivateRoute redirectTo="/login" component={<Layout />} />}
+        element={<PrivateRoute redirectTo="login" component={<Layout />} />}
       >
         <Route index element={<HomePage />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/announcement" element={<AnnouncementsPage />} />
-        <Route path="/lawyers" element={<LawyersPage />} />
+        <Route path="about" element={<AboutUs />} />
+        <Route path="announcement" element={<AnnouncementsPage />} />
+        <Route path="lawyers" element={<LawyersPage />} />
+        <Route
+          path="login"
+          element={<PublicRoute redirectTo="/" component={<LoginPage />} />}
+        />
+        <Route
+          path="register"
+          element={
+            <PublicRoute redirectTo="/" component={<RegistrationPage />} />
+          }
+        />
       </Route>
-      <Route
-        path="/login"
-        element={<PublicRoute redirectTo="/" component={<LoginPage />} />}
-      />
-      <Route
-        path="/register"
-        element={
-          <PublicRoute redirectTo="/" component={<RegistrationPage />} />
-        }
-      />
       <Route path="*" element={<Navigate to={'/'} />} />
     </Routes>
   );

@@ -18,6 +18,7 @@ const initialState = {
   },
   token: null,
   isLoggedIn: true,
+  //!___________________________________________FALSE_____________________________________________________________________________________________________________________________________________
   isRefreshing: false,
 };
 
@@ -43,6 +44,12 @@ const slice = createSlice({
         toast.error('Invalid email or password', toastStyles);
       })
       .addCase(logoutThunk.fulfilled, state => {
+        state.user = { name: null, email: null };
+        state.token = null;
+        state.isLoggedIn = false;
+        //!___________________________________________FALSE_____________________________________________________________________________________________________________________________________________
+      })
+      .addCase(logoutThunk.rejected, state => {
         state.user = { name: null, email: null };
         state.token = null;
         state.isLoggedIn = false;

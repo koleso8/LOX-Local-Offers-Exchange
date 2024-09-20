@@ -13,6 +13,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { authReducer } from './auth/slice';
+
 import { announcementsReducer } from './announcements/slice';
 
 const persistConfig = {

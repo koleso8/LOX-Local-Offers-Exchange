@@ -6,6 +6,12 @@ export default {
       blur: {
         xs: '1px',
       },
+      backgroundImage: {
+        hero: "url('https://biznesua.com.ua/wp-content/uploads/2016/05/profesiya-yurist.jpg')",
+      },
+      width: {
+        screenUp: '102vw',
+      },
       dropShadow: {
         '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
         '4xl': [
