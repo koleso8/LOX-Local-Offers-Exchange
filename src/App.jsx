@@ -11,6 +11,8 @@ import LawyersPage from './pages/LawyersPage';
 import { PublicRoute } from './PublicRoute';
 import LoginPage from './pages/LoginPage';
 import RegistrationPage from './pages/RegistrationPage';
+import OfferContractPage from './pages/OfferContractPage';
+import ContactsPage from './pages/ContactsPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +40,8 @@ function App() {
         <Route path="about" element={<AboutUs />} />
         <Route path="announcement" element={<AnnouncementsPage />} />
         <Route path="lawyers" element={<LawyersPage />} />
+        <Route path="/oferta" element={<OfferContractPage />} />
+        <Route path="contacts" element={<ContactsPage />} />
         <Route
           path="login"
           element={<PublicRoute redirectTo="/" component={<LoginPage />} />}

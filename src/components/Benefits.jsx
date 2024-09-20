@@ -36,7 +36,7 @@ const Benefits = () => {
             alt=""
           />
           <p className="text-m font-semibold">Юридичної практики</p>
-          <p className="text-[64px] font-bold max-h-20">10 років</p>
+          <p className="text-[64px] font-bold max-h-20 text-nowrap">10 років</p>
         </li>
       </ul>
     </section>
