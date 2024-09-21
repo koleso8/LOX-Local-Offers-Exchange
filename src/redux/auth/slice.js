@@ -17,8 +17,7 @@ const initialState = {
     announcements: null,
   },
   token: null,
-  isLoggedIn: true,
-  //!___________________________________________FALSE_____________________________________________________________________________________________________________________________________________
+  isLoggedIn: false,
   isRefreshing: false,
 };
 
@@ -28,26 +27,28 @@ const slice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(registerThunk.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+        state.user = action.payload; //TODO----var
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
-      .addCase(registerThunk.rejected, () => {
+      .addCase(registerThunk.rejected, (state, action) => {
         toast.error('This name or email is already in use', toastStyles);
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+        state.user = action.payload; //TODO----var
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
-      .addCase(loginThunk.rejected, () => {
+      .addCase(loginThunk.rejected, (state, action) => {
+        console.log(action.payload);
+        state.user = action.payload;
+        state.isLoggedIn = true; //TODO delete this after add backend____________________________________
         toast.error('Invalid email or password', toastStyles);
       })
       .addCase(logoutThunk.fulfilled, state => {
         state.user = { name: null, email: null };
         state.token = null;
         state.isLoggedIn = false;
-        //!___________________________________________FALSE_____________________________________________________________________________________________________________________________________________
       })
       .addCase(logoutThunk.rejected, state => {
         state.user = { name: null, email: null };
