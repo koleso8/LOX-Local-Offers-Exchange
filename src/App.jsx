@@ -20,11 +20,6 @@ function App() {
   const isRefreshing = false;
   // useSelector(selectIsRefreshing);
 
-  // return (
-  //   <Layout>
-  //     <HomePage />
-  //   </Layout>
-  // );
   // useEffect(() => {
   //   dispatch(refreshUserThunk());
   // }, [dispatch]);

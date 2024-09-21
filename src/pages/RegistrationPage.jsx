@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import FormLawyer from '../components/formLawyer';
+import FormLawyer from '../components/FormLawyer';
 import FormClient from '../components/FormClient';
 
 const RegistrationPage = () => {
