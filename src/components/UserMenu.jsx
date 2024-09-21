@@ -22,10 +22,7 @@ const UserMenu = () => {
           <NavLink to="/login" className="text-white px-[15px] py-[10px]">
             Вхід
           </NavLink>
-          <NavLink
-            to="/registration"
-            className="text-white px-[15px] py-[10px]"
-          >
+          <NavLink to="/register" className="text-white px-[15px] py-[10px]">
             Реєстрація
           </NavLink>
         </div>

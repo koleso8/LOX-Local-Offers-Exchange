@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 import HomePage from './pages/HomePage';
 import Loader from './components/Loader';
@@ -13,6 +13,7 @@ import LoginPage from './pages/LoginPage';
 import RegistrationPage from './pages/RegistrationPage';
 import OfferContractPage from './pages/OfferContractPage';
 import ContactsPage from './pages/ContactsPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -32,15 +33,17 @@ function App() {
     <Loader />
   ) : (
     <Routes>
-      <Route
-        path="/"
-        element={<PrivateRoute redirectTo="login" component={<Layout />} />}
-      >
+      <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutUs />} />
-        <Route path="announcement" element={<AnnouncementsPage />} />
-        <Route path="lawyers" element={<LawyersPage />} />
-        <Route path="/oferta" element={<OfferContractPage />} />
+        <Route
+          path="/"
+          element={<PrivateRoute redirectTo="login" component={<Outlet />} />}
+        >
+          <Route path="announcement" element={<AnnouncementsPage />} />
+          <Route path="lawyers" element={<LawyersPage />} />
+        </Route>
+        <Route path="oferta" element={<OfferContractPage />} />
         <Route path="contacts" element={<ContactsPage />} />
         <Route
           path="login"
@@ -52,8 +55,8 @@ function App() {
             <PublicRoute redirectTo="/" component={<RegistrationPage />} />
           }
         />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
-      <Route path="*" element={<Navigate to={'/'} />} />
     </Routes>
   );
 }
