@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Address = () => {
   return (
     <div>
-      <address className="flex flex-col gap-2 not-italic mb-6 ">
+      <address className="flex flex-col gap-2 not-italic ">
         <p>м. Дніпро, пр-т Дмитра Яворницького, буд. 99</p>
         <a href="tel:+380671358585">+38(067)135-85-85</a>
         <a href="mailto:lox@gmail.com">lox@gmail.com</a>
@@ -32,7 +32,6 @@ const Address = () => {
           </a>
         </li>
       </ul>
-      <Link to="/oferta">ДОГОВІР ОФЕРТИ</Link>
     </div>
   );
 };

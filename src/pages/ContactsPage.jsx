@@ -1,5 +1,6 @@
 import React from 'react';
 import Address from '../components/Address';
+import { Link } from 'react-router-dom';
 
 const ContactsPage = () => {
   return (
@@ -12,7 +13,10 @@ const ContactsPage = () => {
           <p>EXCHANGE</p>
         </span>
       </div>
-      <Address />
+      <span>
+        <Address />
+        <Link to="/oferta">ДОГОВІР ОФЕРТИ</Link>
+      </span>
     </section>
   );
 };

@@ -14,3 +14,22 @@
   padding: 10px 15px;
   font-weight: 600;
 }
+
+::-webkit-scrollbar {
+  width: 5px; /* Ширина всего элемента навигации */
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff00; /* Цвет дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000; /* Цвет бегунка */
+  border-radius: 20px; /* Округление бегунка */
+  border: 1px solid #000000; /* Оформление границ бегунка */
+}
+
+::-webkit-scrollbar-button {
+  /* 2 - кнопка */
+  background-color: #000000;
+}
