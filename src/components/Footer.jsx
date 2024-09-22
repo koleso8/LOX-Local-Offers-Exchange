@@ -25,17 +25,16 @@ const Footer = () => {
           </Link>
         </nav>
         <Address />
-        <div className="text-[100px] text-black py-2">
-          {currentAnnouncemetn && (
-            <CurrentModal
-              isOpen={isOpen}
-              onClose={() => {
-                dispatch(closeModal());
-              }}
-              announcement={currentAnnouncemetn}
-            />
-          )}
-        </div>
+
+        {currentAnnouncemetn && (
+          <CurrentModal
+            isOpen={isOpen}
+            onClose={() => {
+              dispatch(closeModal());
+            }}
+            announcement={currentAnnouncemetn}
+          />
+        )}
       </div>
     </div>
   );

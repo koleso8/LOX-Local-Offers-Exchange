@@ -1,6 +1,5 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import {
-  addAnnouncementThunk,
   deleteAnnouncementThunk,
   fetchAllAnnouncementsThunk,
   editAnnouncementThunk,
@@ -33,17 +32,12 @@ const announcementsSlice = createSlice({
           ann.id === payload.id ? payload : ann
         );
       })
-      .addCase(addAnnouncementThunk.fulfilled, (state, { payload }) => {
-        const { items } = state;
-        state.items = [...items, payload];
-      })
       .addCase(deleteAnnouncementThunk.fulfilled, (state, { payload }) => {
         state.items = state.items.filter(ann => ann.id !== payload);
       })
       .addMatcher(
         isAnyOf(
           fetchAllAnnouncementsThunk.pending,
-          addAnnouncementThunk.pending,
           deleteAnnouncementThunk.pending
         ),
         state => {
@@ -54,7 +48,6 @@ const announcementsSlice = createSlice({
       .addMatcher(
         isAnyOf(
           fetchAllAnnouncementsThunk.fulfilled,
-          addAnnouncementThunk.fulfilled,
           deleteAnnouncementThunk.fulfilled
         ),
         state => {
@@ -65,7 +58,6 @@ const announcementsSlice = createSlice({
       .addMatcher(
         isAnyOf(
           fetchAllAnnouncementsThunk.rejected,
-          addAnnouncementThunk.rejected,
           deleteAnnouncementThunk.rejected
         ),
         state => {

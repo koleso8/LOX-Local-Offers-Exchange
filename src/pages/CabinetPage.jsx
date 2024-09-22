@@ -3,11 +3,12 @@ import AnnouncemenList from '../components/AnnouncementList';
 import { selectUserAnnouncements } from '../redux/auth/selectors';
 import { BiCabinet } from 'react-icons/bi';
 import AddAnnouncementButton from '../components/AddAnnouncementButton';
+import AddAnnouncementModal from '../components/AddAnnouncementModal';
 
 const CabinetPage = () => {
   const userAnnouncement = useSelector(selectUserAnnouncements);
   return (
-    <div className=" text-black py-2 flex flex-col gap-8 justify-center items-center">
+    <div className=" text-black py-2 flex flex-col gap-8 justify-center items-center w-screen">
       {userAnnouncement.length ? (
         <AnnouncemenList array={userAnnouncement} />
       ) : (
@@ -22,6 +23,7 @@ const CabinetPage = () => {
           </p>
         </div>
       )}
+      <AddAnnouncementModal />
       <AddAnnouncementButton />
     </div>
   );

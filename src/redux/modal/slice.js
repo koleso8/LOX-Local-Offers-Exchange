@@ -18,7 +18,7 @@ const slice = createSlice({
       state.newAnnouncement = action.payload;
     },
     closeModal: state => {
-      state.newAnnouncement = null;
+      state.newAnnouncement = false;
       state.currentAnnouncement = null;
       document.body.style.overflow = 'unset';
     },

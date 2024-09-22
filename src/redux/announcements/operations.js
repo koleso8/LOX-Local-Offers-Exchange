@@ -16,20 +16,6 @@ export const fetchAllAnnouncementsThunk = createAsyncThunk(
   }
 );
 
-export const addAnnouncementThunk = createAsyncThunk(
-  'announcements/addAnnouncement',
-  async (announcement, thunkAPI) => {
-    try {
-      const { data } = await lox.post('____________________', announcement);
-      toast.success('Announcements added!', toastStyles);
-      return data;
-    } catch (error) {
-      toast.error('announcements was not added!', toastStyles);
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  }
-);
-
 export const editAnnouncementThunk = createAsyncThunk(
   'announcements/editAnnouncement',
   async (announcement, thunkAPI) => {
