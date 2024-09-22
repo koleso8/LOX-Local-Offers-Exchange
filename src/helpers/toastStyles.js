@@ -6,8 +6,8 @@ export const toastStyles = {
   draggable: true,
 
   style: {
-    backgroundColor: '#c754ebb4 ',
-    color: 'white',
+    backgroundColor: 'white ',
+    color: 'black',
     fontSize: '16px',
     padding: '10px',
     fontFamily: 'Poppins, sans-serif',

@@ -22,10 +22,12 @@ export const registerThunk = createAsyncThunk(
       const { data } = await lox.post('________________', userData);
       setAuthHeader(data.token);
       toast.success('Registration successful!', toastStyles);
-      return data;
+      return data; //TODO______data
     } catch (error) {
       toast.error('Failed to register!', toastStyles);
-      return thunkAPI.rejectWithValue(error.message);
+
+      return userData; //TODO______data
+      // return thunkAPI.rejectWithValue(error.message);
     }
   }
 );

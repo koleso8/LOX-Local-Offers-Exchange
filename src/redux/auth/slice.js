@@ -32,6 +32,9 @@ const slice = createSlice({
         state.isLoggedIn = true;
       })
       .addCase(registerThunk.rejected, (state, action) => {
+        console.log(action.payload);
+
+        state.user = action.payload; //TODO----var
         toast.error('This name or email is already in use', toastStyles);
       })
       .addCase(loginThunk.fulfilled, (state, action) => {

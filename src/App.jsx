@@ -14,6 +14,7 @@ import RegistrationPage from './pages/RegistrationPage';
 import OfferContractPage from './pages/OfferContractPage';
 import ContactsPage from './pages/ContactsPage';
 import NotFoundPage from './pages/NotFoundPage';
+import CabinetPage from './pages/CabinetPage';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function App() {
         >
           <Route path="announcement" element={<AnnouncementsPage />} />
           <Route path="lawyers" element={<LawyersPage />} />
+          <Route path="cabinet" element={<CabinetPage />} />
         </Route>
         <Route path="oferta" element={<OfferContractPage />} />
         <Route path="contacts" element={<ContactsPage />} />

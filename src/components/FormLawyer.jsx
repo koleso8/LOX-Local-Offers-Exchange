@@ -14,11 +14,12 @@ const FormLawyer = () => {
     email: '',
     tel: 380,
     password: '',
+    announcements: [],
   };
 
   const handleSubmit = (data, action) => {
     console.log(data);
-    dispatch(registerThunk({ data }));
+    dispatch(registerThunk(data));
     action.resetForm();
   };
   return (

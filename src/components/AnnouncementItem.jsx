@@ -1,6 +1,13 @@
+import { useDispatch } from 'react-redux';
+import { setCurrentAnnouncement } from '../redux/modal/slice';
+
 const AnnouncementItem = ({ item }) => {
+  const dispatch = useDispatch();
   return (
-    <li className="flex w-full ]">
+    <li
+      className="flex w-full cursor-pointer"
+      onClick={() => dispatch(setCurrentAnnouncement(item))}
+    >
       <span className="flex flex-col w-4/5 bg-slate-200 text-black p-5 rounded-l-2xl">
         <p className="text-[17px]">{item.author}</p>
         <h3 className="text-xl">{item.title}</h3>
