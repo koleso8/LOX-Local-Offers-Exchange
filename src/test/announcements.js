@@ -1,17 +1,30 @@
 export const announcements = [
   {
     id: 1,
-    announcementDate: '3424323',
+    announcementDate: new Date().toLocaleDateString('en-us', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      tel: '+1 (304) 622-7634',
+    }),
     type: 'client',
     title: 'Proma Farazj',
     comment:
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic accusantium laboriosam nesciunt maxime, quaerat obcaecati blanditiis ratione. Ratione, harum voluptas?',
     author: 'Pes Sobakovicch',
     price: 4875,
+    tel: '+565291-4561-51',
   },
   {
     id: 2,
-    announcementDate: '32343',
+    announcementDate: new Date().toLocaleDateString('en-us', {
+      tel: '+1 (304) 622-7634',
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }),
     type: 'lawyer',
     title: 'Proma Kota',
     comment:
@@ -21,7 +34,13 @@ export const announcements = [
   },
   {
     id: 3,
-    announcementDate: '323423',
+    announcementDate: new Date().toLocaleDateString('en-us', {
+      tel: '+1 (304) 622-7634',
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }),
     type: 'lawyer',
     title: 'Proma Fasd',
     comment:
@@ -31,7 +50,13 @@ export const announcements = [
   },
   {
     id: 4,
-    announcementDate: '34223',
+    announcementDate: new Date().toLocaleDateString('en-us', {
+      tel: '+1 (304) 622-7634',
+      weekday: 'long',
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    }),
     type: 'client',
     title: 'P1234fs Farazj',
     comment:

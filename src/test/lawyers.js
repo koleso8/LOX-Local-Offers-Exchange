@@ -6,6 +6,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -14,6 +16,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -22,6 +26,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -30,6 +36,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -38,6 +46,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -46,6 +56,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -54,6 +66,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -62,6 +76,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -70,6 +86,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -78,6 +96,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -86,6 +106,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -94,6 +116,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -102,6 +126,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -110,6 +136,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -118,6 +146,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -126,6 +156,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -134,6 +166,8 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
   {
     img: 'https://www.deadlawyers.org/wp-content/uploads/2022/05/c2f3177ed47bd7343dc7181afba25cdd5d1ec.jpg',
@@ -142,5 +176,7 @@ export const lawyers = [
     age: 33,
     count: 22,
     exp: 5,
+    stream: 'Sobaki',
+    tel: '+2641612625645',
   },
 ];

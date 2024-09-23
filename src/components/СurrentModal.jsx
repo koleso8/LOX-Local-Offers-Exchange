@@ -1,17 +1,21 @@
 import Modal from 'react-modal';
 import { FiX } from 'react-icons/fi';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectTypeOfUser } from '../redux/auth/selectors';
+import { formatPhoneNumber } from '../helpers/formatPhoneNumber';
+import { addAnnouncementThunk } from '../redux/auth/operations';
 
 const CurrentModal = ({ isOpen, onClose, announcement }) => {
   const isLawyer = useSelector(selectTypeOfUser) === 'lawyer';
+  const dispatch = useDispatch();
+
   return (
     <div className="fixed">
       <Modal
         isOpen={isOpen}
         onRequestClose={onClose} // Закриття при натисканні Escape або на бекдроп
         shouldCloseOnOverlayClick={true} // Закриття при кліку на бекдроп
-        className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4"
+        className="absolute top-1/2 left-1/2 -translate-y-2/4 -translate-x-2/4 rounded-3xl outline-none"
         ariaHideApp={false}
       >
         <div className="bg-white p-10 relative w-[540px] rounded-3xl max-h-screen flex flex-col gap-3">
@@ -25,12 +29,24 @@ const CurrentModal = ({ isOpen, onClose, announcement }) => {
             {announcement.comment}
           </p>
           <span>
-            <p className="font-bold underline">{announcement.author}</p>
+            <p className="font-bold text-2xl underline mb-3">
+              {announcement.author}
+            </p>
             <p>{announcement.announcementDate}</p>
           </span>
-          <p className=" bg-black text-white p-5 rounded-2xl text-center w-60 mx-auto">
-            {announcement.price} грн. {isLawyer && '|  Допомогти'}
+          <p className=" bg-black text-white p-5 rounded-2xl text-center w-40 mx-auto">
+            {announcement.price} грн.
           </p>
+          {isLawyer && (
+            <a
+              className=" bg-black text-white p-5 rounded-2xl text-center w-auto mx-auto cursor-pointer flex flex-col"
+              href={`tel:${formatPhoneNumber(announcement.tel)}`}
+              onClick={() => dispatch(addAnnouncementThunk(announcement))}
+            >
+              {announcement.tel}
+              <p>Допомогти</p>
+            </a>
+          )}
         </div>
       </Modal>
     </div>

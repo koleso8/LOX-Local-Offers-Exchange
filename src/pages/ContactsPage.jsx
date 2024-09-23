@@ -15,7 +15,12 @@ const ContactsPage = () => {
       </div>
       <span>
         <Address />
-        <Link to="/oferta">ДОГОВІР ОФЕРТИ</Link>
+        <Link
+          className=" text-white bg-black px-3 py-3 rounded-3xl"
+          to="/oferta"
+        >
+          ДОГОВІР ОФЕРТИ
+        </Link>
       </span>
     </section>
   );

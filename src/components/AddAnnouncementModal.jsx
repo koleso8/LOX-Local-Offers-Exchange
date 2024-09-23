@@ -5,9 +5,12 @@ import { closeModal } from '../redux/modal/slice';
 import { FiX } from 'react-icons/fi';
 import { Field, Form, Formik } from 'formik';
 
-import { selectTypeOfUser, selectUserName } from '../redux/auth/selectors';
+import {
+  selectTypeOfUser,
+  selectUserName,
+  selectUserTel,
+} from '../redux/auth/selectors';
 import { addAnnouncementThunk } from '../redux/auth/operations';
-import { useEffect, useState } from 'react';
 
 const AddAnnouncementModal = () => {
   const dispatch = useDispatch();
@@ -15,6 +18,7 @@ const AddAnnouncementModal = () => {
   const onClose = () => dispatch(closeModal());
   const type = useSelector(selectTypeOfUser);
   const username = useSelector(selectUserName);
+  const tel = useSelector(selectUserTel);
 
   const handleSubmit = (data, action) => {
     dispatch(addAnnouncementThunk(data));
@@ -33,6 +37,7 @@ const AddAnnouncementModal = () => {
     title: '',
     comment: '',
     author: username,
+    tel,
     price: 0,
   };
 
