@@ -23,7 +23,7 @@ const RegistrationPage = () => {
   });
 
   return (
-    <div className="overflow-y-hidden h-[600px] max-h-max text-white bg-slate-950 rounded-full  flex flex-col items-center justify-center w-full">
+    <div className="overflow-y-hidden h-[600px]  text-white bg-slate-950 rounded-full  flex flex-col items-center justify-center w-full">
       <div className="pt-4 flex gap-12 text-3xl fixed top-[120px] ">
         <span
           className="py-[10px] px-[15px] cursor-pointer"
