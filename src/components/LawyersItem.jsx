@@ -1,6 +1,6 @@
 import { FaPowerOff } from 'react-icons/fa';
 import { formatPhoneNumber } from '../helpers/formatPhoneNumber';
-import Aos from 'aos';
+import { ageFormatter } from '../helpers/ageFormatter';
 
 const LawyersItem = ({ item }) => {
   return (
@@ -12,9 +12,9 @@ const LawyersItem = ({ item }) => {
           <p className="text-[17px]">{item.address}</p>
           <p className="text-[17px]">{item.stream}</p>
 
-          <p className="text-[17px]">Вік: {item.age}</p>
-          <p className="text-[17px]">{item.count}</p>
-          <p className="text-[17px]">{item.exp}</p>
+          <p className="text-[17px]">Вік: {ageFormatter(item.age)}</p>
+          <p className="text-[17px]">Вирішених питань: {item.count}</p>
+          <p className="text-[17px]">стаж: {ageFormatter(item.exp)}</p>
         </span>
       </span>
       <a
