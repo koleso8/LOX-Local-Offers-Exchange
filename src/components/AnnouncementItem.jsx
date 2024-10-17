@@ -5,7 +5,7 @@ const AnnouncementItem = ({ item }) => {
   const dispatch = useDispatch();
   return (
     <li
-      className="flex w-full cursor-pointer"
+      className="flex w-full cursor-pointer hover:scale-105 transition-all "
       onClick={() => dispatch(setCurrentAnnouncement(item))}
     >
       <span className="flex flex-col w-4/5 bg-slate-200 text-black p-5 rounded-l-2xl">
