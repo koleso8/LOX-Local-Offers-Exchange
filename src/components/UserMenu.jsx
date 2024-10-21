@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectIsLoggedIn, selectUserName } from '../redux/auth/selectors';
+import {
+  selectIsLoggedIn,
+  selectTypeOfUser,
+  selectUserName,
+} from '../redux/auth/selectors';
 import { Link, NavLink } from 'react-router-dom';
 import { logoutThunk } from '../redux/auth/operations';
 import { BiCabinet } from 'react-icons/bi';
@@ -7,6 +11,9 @@ import { BiCabinet } from 'react-icons/bi';
 const UserMenu = () => {
   const isLogIn = useSelector(selectIsLoggedIn);
   const userName = useSelector(selectUserName);
+  const userType =
+    useSelector(selectTypeOfUser) === 'lawyer' ? 'Юрист' : 'Клієнт';
+
   const dispatch = useDispatch();
   console.log(userName);
 
@@ -18,7 +25,7 @@ const UserMenu = () => {
             to="/cabinet"
             className="active text-black flex items-center gap-4 cursor-pointer"
           >
-            {userName} <BiCabinet />
+            {userType} : {userName} <BiCabinet />
           </Link>
           <button
             className="bg-white px-[15px] py-[10px] font-bold rounded-[34px]"

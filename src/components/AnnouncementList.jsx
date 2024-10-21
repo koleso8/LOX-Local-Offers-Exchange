@@ -4,7 +4,7 @@ import AnnouncementItem from './AnnouncementItem';
 const AnnouncemenList = ({ array }) => {
   Aos.init();
   return (
-    <ul className="flex flex-col gap-5 w-full">
+    <ul className="flex flex-col gap-5 w-full justify-center">
       {array.map(item => (
         <AnnouncementItem key={item.id || item.announcementDate} item={item} />
       ))}

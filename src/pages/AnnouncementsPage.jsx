@@ -3,7 +3,7 @@ import AnnouncemenList from '../components/AnnouncementList';
 
 const AnnouncementsPage = () => {
   return (
-    <div className="text-[100px] text-black py-2">
+    <div className="text-[100px] text-black py-2 w-full">
       <AnnouncemenList array={announcements} />
     </div>
   );
