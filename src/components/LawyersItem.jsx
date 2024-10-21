@@ -4,7 +4,7 @@ import { ageFormatter } from '../helpers/ageFormatter';
 
 const LawyersItem = ({ item }) => {
   return (
-    <li className="flex w-full h-32] hover:scale-105 transition-all">
+    <li className="flex w-full h-32] hover:scale-105 transition-all cursor-pointer">
       <span className="flex w-4/5 bg-slate-200 text-black  rounded-l-2xl ">
         <img className="w-40 object-cover" src={item.img} alt={item.username} />
         <span className="flex-col p-5">

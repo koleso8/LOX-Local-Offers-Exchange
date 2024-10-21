@@ -8,7 +8,7 @@ import { TbTopologyComplex } from 'react-icons/tb';
 
 const HowItsWork = () => {
   return (
-    <section className="mb-8">
+    <section className="mb-8" data-aos="flip-left" data-aos-duration="700">
       <h3 className="text-center text-4xl mb-3 font-bold">Як це працює</h3>
       <div className="bg-slate-950 py-[35px] px-24 flex items-center justify-center rounded-2xl">
         <ul className="text-white flex gap-8">

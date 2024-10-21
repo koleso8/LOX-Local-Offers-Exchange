@@ -12,12 +12,23 @@ import { MdOutlineQueryStats } from 'react-icons/md';
 const AboutUs = () => {
   return (
     <section className="text-black mb-8">
-      <h2 className="text-[40px] font-semibold mb-5">Про нас</h2>
-      <p className="text-2xl font-semibold mb-5">
+      <h2 className="text-[40px] font-semibold mb-5" data-aos="fade-right">
+        Про нас
+      </h2>
+      <p className="text-2xl font-semibold mb-5" data-aos="fade-left">
         Професійна юридична допомога в Україні
       </p>
-      <p className="text-[64px] text-center font-bold mb-5">1200 перемог</p>
-      <div className="bg-slate-950 p-8 rounded-xl flex flex-col items-center gap-8 mb-8">
+      <p
+        className="text-[64px] text-center font-bold mb-5"
+        data-aos="fade-right"
+      >
+        1200 перемог
+      </p>
+      <div
+        className="bg-slate-950 p-8 rounded-xl flex flex-col items-center gap-8 mb-8"
+        data-aos="flip-left"
+        data-aos-duration="700"
+      >
         <ul className="text-white flex gap-8">
           <li className="w-3/4 items-center text-center flex flex-col gap-5">
             <FaPeopleGroup size="60px" />
