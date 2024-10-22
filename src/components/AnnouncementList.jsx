@@ -6,7 +6,7 @@ const AnnouncemenList = ({ array }) => {
   return (
     <ul className="flex flex-col gap-5 w-full justify-center">
       {array.map(item => (
-        <AnnouncementItem key={item.id || item.announcementDate} item={item} />
+        <AnnouncementItem key={item._id || item.announcementDate} item={item} />
       ))}
     </ul>
   );

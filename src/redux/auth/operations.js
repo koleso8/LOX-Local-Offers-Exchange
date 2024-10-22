@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import { toastStyles } from '../../helpers/toastStyles';
 
 export const lox = axios.create({
-  baseURL: '__________________________________________',
+  baseURL: 'https://lox-19k0.onrender.com',
 });
 
 const setAuthHeader = token => {

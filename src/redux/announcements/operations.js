@@ -8,8 +8,9 @@ export const fetchAllAnnouncementsThunk = createAsyncThunk(
   'announcements/fetchAllAnnouncements',
   async (_, thunkAPI) => {
     try {
-      const { data } = await lox.get('__________________________');
-      return data;
+      const { data } = await lox.get('/announcements');
+
+      return data.data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

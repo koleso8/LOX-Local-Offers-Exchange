@@ -15,7 +15,6 @@ const UserMenu = () => {
     useSelector(selectTypeOfUser) === 'lawyer' ? 'Юрист' : 'Клієнт';
 
   const dispatch = useDispatch();
-  console.log(userName);
 
   return (
     <div>
