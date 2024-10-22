@@ -6,11 +6,11 @@ import { lox } from '../auth/operations';
 
 export const fetchAllAnnouncementsThunk = createAsyncThunk(
   'announcements/fetchAllAnnouncements',
-  async (_, thunkAPI) => {
+  async (page, thunkAPI) => {
     try {
-      const { data } = await lox.get('/announcements');
+      const { data } = await lox.get('/announcements', { params: { page } });
 
-      return data.data.data;
+      return data.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

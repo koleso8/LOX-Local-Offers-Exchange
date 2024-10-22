@@ -3,8 +3,6 @@ import { setCurrentAnnouncement } from '../redux/modal/slice';
 import { formatDate } from '../helpers/formatData';
 
 const AnnouncementItem = ({ item }) => {
-  console.log(item);
-
   const dispatch = useDispatch();
   return (
     <li

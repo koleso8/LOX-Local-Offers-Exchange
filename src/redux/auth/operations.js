@@ -19,7 +19,7 @@ export const registerThunk = createAsyncThunk(
   'auth/register',
   async (userData, thunkAPI) => {
     try {
-      const { data } = await lox.post('________________', userData);
+      const { data } = await lox.post('/announcements', userData);
       setAuthHeader(data.token);
       toast.success('Registration successful!', toastStyles);
       return data; //TODO______data

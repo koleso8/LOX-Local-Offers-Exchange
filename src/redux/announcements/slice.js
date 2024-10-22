@@ -25,7 +25,7 @@ const announcementsSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchAllAnnouncementsThunk.fulfilled, (state, { payload }) => {
-        state.items = payload;
+        state.items = [...state.items, ...payload.data];
       })
       .addCase(editAnnouncementThunk.fulfilled, (state, { payload }) => {
         state.items = state.items.map(ann =>
