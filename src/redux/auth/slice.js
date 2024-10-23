@@ -12,7 +12,7 @@ import { toastStyles } from '../../helpers/toastStyles';
 
 const initialState = {
   user: {
-    username: null,
+    name: null,
     type: null,
     email: null,
     announcements: null,
@@ -29,13 +29,14 @@ const slice = createSlice({
     builder
       .addCase(registerThunk.fulfilled, (state, action) => {
         state.user = action.payload; //TODO----var
+        console.log(action.payload);
+
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
       .addCase(registerThunk.rejected, (state, action) => {
         console.log(action.payload);
-
-        state.user = action.payload; //TODO----var
+        // state.user = action.payload; //TODO----var
         toast.error('This name or email is already in use', toastStyles);
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
@@ -46,7 +47,6 @@ const slice = createSlice({
       .addCase(loginThunk.rejected, (state, action) => {
         console.log(action.payload);
         state.user = action.payload;
-        state.isLoggedIn = true; //TODO delete this after add backend____________________________________
         toast.error('Invalid email or password', toastStyles);
       })
       .addCase(logoutThunk.fulfilled, state => {

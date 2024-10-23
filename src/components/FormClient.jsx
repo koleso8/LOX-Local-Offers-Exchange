@@ -6,7 +6,7 @@ const FormClient = () => {
   const dispatch = useDispatch();
 
   const initialValues = {
-    username: '',
+    name: '',
     type: 'client',
     email: '',
     tel: 380,
@@ -28,7 +28,7 @@ const FormClient = () => {
           <Field
             className="pl-2 text-black border-white border-[2px] rounded-3xl"
             type="text"
-            name="username"
+            name="name"
             placeholder="введіть ім`я"
           />
         </label>

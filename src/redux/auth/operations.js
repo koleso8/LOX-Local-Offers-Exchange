@@ -19,15 +19,14 @@ export const registerThunk = createAsyncThunk(
   'auth/register',
   async (userData, thunkAPI) => {
     try {
-      const { data } = await lox.post('/announcements', userData);
-      setAuthHeader(data.token);
+      const { data } = await lox.post('/auth/register', userData);
+      setAuthHeader(data.data.token);
       toast.success('Registration successful!', toastStyles);
-      return data; //TODO______data
+      return data.data;
     } catch (error) {
       toast.error('Failed to register!', toastStyles);
 
-      return userData; //TODO______data
-      // return thunkAPI.rejectWithValue(error.message);
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -35,8 +34,10 @@ export const registerThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'auth/login',
   async (userData, thunkAPI) => {
+    console.log(userData);
+
     try {
-      const { data } = await lox.post('_____________________', userData);
+      const { data } = await lox.post('/auth/login', userData);
       setAuthHeader(data.token);
       toast.success('Login successful!', toastStyles);
       return data;

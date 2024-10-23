@@ -12,11 +12,10 @@ const FormLogin = () => {
   };
 
   const handleSubmit = (data, action) => {
-    console.log(data);
-    dispatch(loginThunk({ data }));
+    dispatch(loginThunk(data));
     action.resetForm();
   };
-
+  // TODO FIX
   return (
     <Formik onSubmit={handleSubmit} initialValues={initialValues}>
       <Form className="flex flex-col gap-8 pt-16 w-[260px] ">

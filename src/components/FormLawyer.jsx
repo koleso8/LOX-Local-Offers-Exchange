@@ -6,7 +6,7 @@ const FormLawyer = () => {
   const dispatch = useDispatch();
 
   const initialValues = {
-    username: '',
+    name: '',
     type: 'lawyer',
     city: '',
     exp: '',
@@ -30,7 +30,7 @@ const FormLawyer = () => {
           <Field
             className="text-black pl-2 border-white border-[2px] rounded-3xl"
             type="text"
-            name="username"
+            name="name"
             placeholder="введіть ім`я"
           />
         </label>
