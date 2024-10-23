@@ -12,21 +12,14 @@ const AnnouncementsPage = () => {
 
   const announcements = useSelector(selectAnnouncements);
 
-  useEffect(() => {
-    dispatch(fetchAllAnnouncementsThunk());
-  }, []);
-
   const loadMore = async () => {
-    const more = dispatch(fetchAllAnnouncementsThunk(page));
+    dispatch(fetchAllAnnouncementsThunk(page));
     setPage(prev => (prev += 1));
-    console.log(await more);
-    // TODO NEXT PAGE
-    setIsNext(await more.payload.hasNextPage);
   };
   return (
     <div className="text-black py-2 w-full flex flex-col items-center">
       <AnnouncemenList array={announcements} />
-      {isNext && (
+      {announcements.length === 10 && (
         <button
           className="rounded-lg font-medium bg-black text-white px-6 py-3 w-44"
           onClick={() => loadMore()}
