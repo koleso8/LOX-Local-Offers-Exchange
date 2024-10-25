@@ -27,12 +27,6 @@ const AddAnnouncementModal = () => {
   };
 
   const initialValues = {
-    announcementDate: new Date().toLocaleDateString('en-us', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    }),
     type,
     title: '',
     comment: '',

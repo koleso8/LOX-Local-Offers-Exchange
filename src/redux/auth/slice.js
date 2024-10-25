@@ -28,26 +28,24 @@ const slice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(registerThunk.fulfilled, (state, action) => {
-        state.user = action.payload; //TODO----var
+        state.user = action.payload;
         console.log(action.payload);
 
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
-      .addCase(registerThunk.rejected, (state, action) => {
-        console.log(action.payload);
-        // state.user = action.payload; //TODO----var
-        toast.error('This name or email is already in use', toastStyles);
+      .addCase(registerThunk.rejected, () => {
+        toast.error('Ця пошта вже використовується !', toastStyles);
       })
       .addCase(loginThunk.fulfilled, (state, action) => {
-        state.user = action.payload; //TODO----var
+        state.user = action.payload;
         state.token = action.payload.token;
         state.isLoggedIn = true;
       })
       .addCase(loginThunk.rejected, (state, action) => {
         console.log(action.payload);
         state.user = action.payload;
-        toast.error('Invalid email or password', toastStyles);
+        toast.error('Невірний емейл або пароль', toastStyles);
       })
       .addCase(logoutThunk.fulfilled, state => {
         state.user = { name: null, email: null };

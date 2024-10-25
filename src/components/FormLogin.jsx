@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from 'formik';
 import { loginThunk } from '../redux/auth/operations';
 import { useDispatch } from 'react-redux';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const FormLogin = () => {
   const dispatch = useDispatch();
