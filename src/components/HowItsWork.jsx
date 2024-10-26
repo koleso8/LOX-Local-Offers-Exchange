@@ -1,3 +1,4 @@
+import Aos from 'aos';
 import {
   FaArrowsDownToPeople,
   FaBusinessTime,
@@ -7,6 +8,7 @@ import {
 import { TbTopologyComplex } from 'react-icons/tb';
 
 const HowItsWork = () => {
+  Aos.init();
   return (
     <section className="mb-8" data-aos="flip-left" data-aos-duration="700">
       <h3 className="text-center text-4xl mb-3 font-bold">Як це працює</h3>
