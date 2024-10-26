@@ -24,11 +24,7 @@ const AboutUs = () => {
       >
         1200 перемог
       </p>
-      <div
-        className="bg-slate-950 p-8 rounded-xl flex flex-col items-center gap-8 mb-8"
-        data-aos="flip-left"
-        data-aos-duration="700"
-      >
+      <div className="bg-slate-950 p-8 rounded-xl flex flex-col items-center gap-8 mb-8">
         <ul className="text-white flex gap-8">
           <li className="w-3/4 items-center text-center flex flex-col gap-5">
             <FaPeopleGroup size="60px" />
