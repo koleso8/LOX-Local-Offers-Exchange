@@ -34,8 +34,6 @@ export const registerThunk = createAsyncThunk(
 export const loginThunk = createAsyncThunk(
   'auth/login',
   async (userData, thunkAPI) => {
-    console.log(userData);
-
     try {
       const { data } = await lox.post('/auth/login', userData);
       setAuthHeader(data.token);
@@ -52,7 +50,7 @@ export const logoutThunk = createAsyncThunk(
   'auth/logout',
   async (_, thunkAPI) => {
     try {
-      await lox.delete('___________');
+      await lox.post('auth/logout');
       clearAuthHeader();
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -72,7 +70,7 @@ export const refreshUserThunk = createAsyncThunk(
     try {
       setAuthHeader(persistToken);
 
-      const { data } = await lox.get('__________');
+      const { data } = await lox.post('auth/refresh');
 
       return data;
     } catch (error) {
@@ -85,13 +83,12 @@ export const addAnnouncementThunk = createAsyncThunk(
   'auth/addAnnouncement',
   async (announcement, thunkAPI) => {
     try {
-      const { data } = await lox.post('____________________', announcement);
+      const { data } = await lox.post('/announcements', announcement);
       toast.success('Announcements added!', toastStyles);
       return data;
     } catch (error) {
-      return announcement; //TODO delete
-      // toast.error('announcements was not added!', toastStyles);
-      // return thunkAPI.rejectWithValue(error.message);
+      toast.error('announcements was not added!', toastStyles);
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
@@ -100,7 +97,7 @@ export const getAnnouncementThunk = createAsyncThunk(
   'auth/getAnnouncement',
   async (_, thunkAPI) => {
     try {
-      const { data } = await lox.get('_________');
+      const { data } = await lox.get('/announcements/:announcementId');
       return data.announcements;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
