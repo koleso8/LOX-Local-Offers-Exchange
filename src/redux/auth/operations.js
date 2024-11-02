@@ -58,6 +58,11 @@ export const logoutThunk = createAsyncThunk(
   }
 );
 
+export const resetPasswordThunk = createAsyncThunk(
+  'auth/reset-password',
+  async (email, thunkAPI) => {}
+);
+
 export const refreshUserThunk = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
