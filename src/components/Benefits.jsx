@@ -43,7 +43,7 @@ const Benefits = () => {
         >
           <img
             className="mb-5 w-56 h-44 object-cover"
-            src="https://rovesnyknews.te.ua/wp-content/uploads/2022/10/derzhavnyj-reyestrator.jpg"
+            src="https://st5.depositphotos.com/16122460/69775/i/450/depositphotos_697755148-stock-photo-lawyer-working-wooden-table-office.jpg"
             alt=""
           />
           <p className="text-m font-semibold">Юридичної практики</p>
