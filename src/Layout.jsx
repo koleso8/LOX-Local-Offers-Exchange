@@ -21,6 +21,11 @@ export const Layout = () => {
       <main className="pt-[120px] w-4/5 flex justify-between mx-auto items-center">
         <Outlet />
       </main>
+      <script 
+  src="https://www.go-it-hackathon.website/widget.js" 
+  data-agent="15a84753-0b20-49db-9893-63de8d208dfe"
+  async
+></script>
       <Footer />
     </div>
   );
