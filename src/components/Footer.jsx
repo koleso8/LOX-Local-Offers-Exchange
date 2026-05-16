@@ -44,12 +44,13 @@ const Footer = () => {
             announcement={currentAnnouncemetn}
           />
         )}
-      </div>
-        <script 
+           <script 
       src="https://www.go-it-hackathon.website/widget.js" 
       data-agent="15a84753-0b20-49db-9893-63de8d208dfe"
       async
   ></script>
+      </div>
+     
     </div>
   );
 };
