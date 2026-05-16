@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Address from './Address';
 import CurrentModal from './СurrentModal';
@@ -9,6 +10,18 @@ const Footer = () => {
   const currentAnnouncemetn = useSelector(selectCurrentAnnouncement);
   const isOpen = !!currentAnnouncemetn;
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.go-it-hackathon.website/widget.js';
+    script.async = true;
+    script.dataset.agent = '15a84753-0b20-49db-9893-63de8d208dfe';
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="w-[100vw] h-[200px] py-8 bg-slate-950 border-none">
@@ -44,11 +57,6 @@ const Footer = () => {
             announcement={currentAnnouncemetn}
           />
         )}
-           <script 
-      src="https://www.go-it-hackathon.website/widget.js" 
-      data-agent="15a84753-0b20-49db-9893-63de8d208dfe"
-      async
-  ></script>
       </div>
      
     </div>
