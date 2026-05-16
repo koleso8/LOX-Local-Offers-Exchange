@@ -16,6 +16,7 @@ const Footer = () => {
     script.src = 'https://www.go-it-hackathon.website/widget.js';
     script.async = true;
     script.dataset.agent = '15a84753-0b20-49db-9893-63de8d208dfe';
+    script.dataset.delay = "5";
     document.body.appendChild(script);
 
     return () => {
